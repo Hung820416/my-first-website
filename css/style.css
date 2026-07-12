@@ -1,123 +1,369 @@
-        body {
-            margin: 0;
-            background-color: #13cbd8;
-            font-family: Arial, sans-serif;
-        }
+html {
 
-        /* 外層容器 */
-        .page {
-            width: 90%;
-            max-width: 1000px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-        }
+    scroll-behavior: smooth;
 
-        h1 {
-            text-align: center;
-            color: #e78585;
-        }
-
-        h2 {
-            color: #3327df;
-        }
-
-        /* 左右排列 */
-        .container {
-            display: flex;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        /* 卡片 */
-        .card {
-            flex: 1;
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
-        }
-
-        img {
-            width: 200px;
-            display: block;
-            margin: auto;
-            border-radius: 10px;
-        }
-
-        button {
-            margin-top: 20px;
-            background: #3327df;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #241ab8;
-        }
-        
-.intro {
-    text-align: center;
-}    
-.dark {
-    background-color: #222;
-    color: white;
 }
+
+
+body {
+
+    margin: 0;
+
+    background-color: #13cbd8;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* 外層容器 */
+
+.page {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+}
+
+
+
+h1 {
+
+    text-align: center;
+
+    color: #e78585;
+
+}
+
+
+
+h2 {
+
+    color: #3327df;
+
+}
+
+
+
+/* 左右排列 */
+
+.container {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 30px;
+
+}
+
+
+
+/* 卡片 */
+
+.card {
+
+    flex: 1;
+
+    background: #f5f5f5;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    transition: 0.3s;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* 圖片 */
+
+img {
+
+    width: 200px;
+
+    display: block;
+
+    margin: auto;
+
+    border-radius: 10px;
+
+
+    opacity: 0;
+
+    animation: fadeIn 1.5s forwards;
+
+    transition: transform 0.3s;
+
+}
+
+
+
+img:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+
+/* 圖片淡入 */
+
+@keyframes fadeIn {
+
+
+    from {
+
+        opacity: 0;
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/* 按鈕 */
+
+button {
+
+    margin-top: 20px;
+
+    background: #3327df;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+
+button:hover {
+
+    background: #241ab8;
+
+}
+
+
+
+.intro {
+
+    text-align: center;
+
+}
+
+
+
+/* 深色模式 */
+
+.dark {
+
+    background-color: #222;
+
+    color: white;
+
+}
+
+
 
 .dark .page {
+
     background-color: #333;
+
 }
+
+
 
 .dark .card {
+
     background-color: #444;
+
 }
 
+
+
+/* 導覽列 */
+
 .navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
+
     background-color: #333;
+
     padding: 15px 25px;
+
     border-radius: 10px;
+
 }
+
 
 
 .navbar h2 {
+
     color: white;
+
 }
+
 
 
 .navbar ul {
+
     display: flex;
+
     list-style: none;
+
     gap: 20px;
+
 }
+
 
 
 .navbar a {
+
     color: white;
+
     text-decoration: none;
+
 }
+
 
 
 .navbar a:hover {
+
     color: yellow;
+
 }
+
+
+
+/* 聯絡表單 */
+
+.contact-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.contact-form input,
+.contact-form textarea {
+
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+
+}
+
+
+
+.contact-form textarea {
+
+    height: 120px;
+
+    resize: none;
+
+}
+
+
+
+.contact-form button {
+
+    width: 120px;
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    background-color: #333;
+
+    color: white;
+
+    border-radius: 10px;
+
+}
+
+
+
+footer p {
+
+    margin: 5px;
+
+}
+
+
 
 /* 手機版 */
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
 
     .container {
@@ -127,11 +373,13 @@
     }
 
 
+
     .navbar {
 
         flex-direction: column;
 
     }
+
 
 
     .navbar ul {
@@ -145,6 +393,7 @@
     }
 
 
+
     .page {
 
         width: 85%;
@@ -154,10 +403,12 @@
     }
 
 
+
     img {
 
         width: 150px;
 
     }
+
 
 }
