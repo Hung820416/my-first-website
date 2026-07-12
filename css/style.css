@@ -70,15 +70,6 @@
 .intro {
     text-align: center;
 }    
-img {
-    width: 200px;
-    border-radius: 10px;
-    display: block;
-    margin: auto;
-}
-img {
-    width:200px;
-}
 .dark {
     background-color: #222;
     color: white;
@@ -90,4 +81,83 @@ img {
 
 .dark .card {
     background-color: #444;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+
+.navbar h2 {
+    color: white;
+}
+
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.navbar a:hover {
+    color: yellow;
+}
+
+/* 手機版 */
+
+@media (max-width: 768px) {
+
+
+    .container {
+
+        flex-direction: column;
+
+    }
+
+
+    .navbar {
+
+        flex-direction: column;
+
+    }
+
+
+    .navbar ul {
+
+        flex-direction: column;
+
+        padding: 0;
+
+        text-align: center;
+
+    }
+
+
+    .page {
+
+        width: 85%;
+
+        padding: 20px;
+
+    }
+
+
+    img {
+
+        width: 150px;
+
+    }
+
 }
