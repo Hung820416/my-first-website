@@ -172,3 +172,50 @@ if(visitor){
     visitor.textContent = count;
 
 }
+//作品搜尋功能
+
+const searchInput = document.getElementById("searchInput");
+
+
+if(searchInput){
+
+
+    const projectCards = document.querySelectorAll(".project");
+
+
+    searchInput.addEventListener("input", function(){
+
+
+        let keyword = this.value.toLowerCase();
+
+
+
+        projectCards.forEach(function(card){
+
+
+            let text = card.innerText.toLowerCase();
+
+
+
+            if(text.includes(keyword)){
+
+
+                card.style.display = "block";
+
+
+            }else{
+
+
+                card.style.display = "none";
+
+
+            }
+
+
+        });
+
+
+    });
+
+
+}
