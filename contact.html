@@ -9,6 +9,9 @@
 
     <title>聯絡振宏</title>
 
+    <meta name="description" content="聯絡振宏，提供網站合作與交流方式。">
+
+
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="icon" href="images/adobe.jpg">
@@ -16,182 +19,347 @@
 </head>
 
 
-<body>
+
+<body class="dark">
+
 
 
 <div class="page">
 
 
-    <nav class="navbar">
 
-        <h2>振宏的網站</h2>
+<header>
 
-
-        <ul>
-
-            <li><a href="index.html">首頁</a></li>
-
-            <li><a href="about.html">關於我</a></li>
-
-            <li><a href="projects.html">作品</a></li>
-
-            <li><a href="contact.html">聯絡</a></li>
-
-        </ul>
+<nav class="navbar">
 
 
-    </nav>
+    <h2>
+        振宏的網站
+    </h2>
 
 
 
-    <h1>
-        聯絡我
-    </h1>
+    <ul>
 
-
-
-
-    <div class="card">
-
-
-        <h2>
-            留言給我
-        </h2>
-
-
-
-        <form 
-        class="contact-form"
-        action="https://formsubmit.co/a0982417707"
-        method="POST">
-
-
-            <label>
-                姓名：
-            </label>
-
-            <br>
-
-
-            <input 
-            type="text"
-            name="name"
-            placeholder="請輸入姓名">
-
-
-            <br><br>
-
-
-
-
-            <label>
-                Email：
-            </label>
-            
-
-
-            <br>
-
-
-            <input 
-            type="email"
-            name="email"
-            placeholder="請輸入Email">
-
-
-            <br><br>
-
-            <label for="subject">主旨：</label>
-
-            <input 
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="內容主旨">
-
-            <label>
-            留言內容：
-            </label>
-
-
-            <br>
-
-
-            <textarea
-
-            name="message"
-
-            placeholder="請輸入留言">
-
-            </textarea>
-
-
-            <br><br>
-
-
-
-            <button type="submit">
-                送出
-            </button>
-
-
-
-        </form>
-
-        <div class="card">
-
-          <h2>聯絡資訊</h2>
-
-          <p>
-              📧 Email：a0982417707@gmail.com
-          </p>
-
-          <p>
-              🐙 GitHub：
-          </p>
-
-          <a href="https://github.com/Hung820416" target="_blank">
-            GitHub
+        <li>
+            <a href="index.html">
+            首頁
             </a>
+        </li>
 
-          <p>
-           🌐 個人網站：
-          </p>
 
-          <a href="https://hung820416.github.io/my-first-website/" target="_blank">
-             我的個人網站
-         </a>
+        <li>
+            <a href="about.html">
+            關於我
+            </a>
+        </li>
+
+
+        <li>
+            <a href="projects.html">
+            作品
+            </a>
+        </li>
+
+
+        <li>
+            <a href="contact.html">
+            聯絡
+            </a>
+        </li>
+
+
+    </ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+
+<main>
+
+
+
+<h1>
+    聯絡我
+</h1>
+
+
+
+
+
+<div class="container">
+
+
+
+<!-- 留言表單 -->
+
+
+<section class="card">
+
+
+<h2>
+    留言給我
+</h2>
+
+
+
+
+<form 
+class="contact-form"
+
+action="https://formsubmit.co/a0982417707@gmail.com"
+
+method="POST">
+
+
+
+
+
+<label>
+姓名：
+</label>
+
+
+<input
+
+type="text"
+
+name="name"
+
+placeholder="請輸入姓名"
+
+required>
+
+
+
+
+
+
+<label>
+Email：
+</label>
+
+
+<input
+
+type="email"
+
+name="email"
+
+placeholder="請輸入Email"
+
+required>
+
+
+
+
+
+
+<label>
+主旨：
+</label>
+
+
+<input
+
+type="text"
+
+name="subject"
+
+placeholder="內容主旨"
+
+required>
+
+
+
+
+
+
+<label>
+留言內容：
+</label>
+
+
+<textarea
+
+name="message"
+
+placeholder="請輸入留言"
+
+required>
+
+</textarea>
+
+
+
+
+
+<!-- FormSubmit 設定 -->
+
+
+<input
+
+type="hidden"
+
+name="_captcha"
+
+value="false">
+
+
+
+
+
+<button type="submit">
+
+送出
+
+</button>
+
+
+
+
+</form>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- 聯絡資訊 -->
+
+
+<section class="card">
+
+
+<h2>
+    聯絡資訊
+</h2>
+
+
+
+
+<p>
+📧 Email：
+</p>
+
+
+<p>
+a0982417707@gmail.com
+</p>
+
+
+
+
+
+<p>
+🐙 GitHub：
+</p>
+
+
+<a 
+
+href="https://github.com/Hung820416"
+
+target="_blank">
+
+GitHub
+
+</a>
+
+
+
+
+
+
+
+<p>
+🌐 個人網站：
+</p>
+
+
+<a
+
+href="https://hung820416.github.io/my-first-website/"
+
+target="_blank">
+
+我的個人網站
+
+</a>
+
+
+
+
+</section>
+
+
+
+
 
 </div>
 
 
 
-    </div>
+
+</main>
 
 
 
 
 </div>
+
+
+
+
+
+
 
 <footer>
 
-    <p>
-        © 2026 振宏的個人網站
-    </p>
 
-    <p>
-        學習 HTML | CSS | JavaScript
-    </p>
+<p>
+© 2026 振宏的個人網站
+</p>
+
+
+<p>
+學習 HTML | CSS | JavaScript
+</p>
+
 
 </footer>
 
+
+
+
+
 <button id="topBtn">
+
 ↑
+
 </button>
 
-<script src="js/script.js"></script>
+
+
+
+
+<script src="js/script.js" defer></script>
+
 
 
 </body>
+
 
 </html>
