@@ -23,6 +23,7 @@
 
     <!-- 導覽列 -->
     <header>
+        
 
         <nav class="navbar">
 
@@ -44,11 +45,41 @@
 
         <h1>我的作品</h1>
 
+        <div class="filter">
+
+
+            <button class="filterBtn active">
+            全部
+            </button>
+
+
+            <button class="filterBtn">
+            HTML
+            </button>
+
+
+            <button class="filterBtn">
+            CSS
+            </button>
+
+
+            <button class="filterBtn">
+            JavaScript
+            </button>
+
+
+            </div>
+
         <div class="container">
 
-            <section class="card">
+            <section class="card project html css javascript">
 
                 <h2>作品 1</h2>
+
+                <img
+                 class="project-image"
+                 src="images/website.png"
+                 alt="我的第一個網站">
 
                 <h3>我的第一個個人網站</h3>
 
@@ -76,9 +107,17 @@
                     查看網站
                 </button>
 
+                <a href="https://github.com/Hung820416/my-first-website" target="_blank">
+
+                <button>
+                GitHub原始碼
+                </button>
+
+                </a>
+
             </section>
 
-            <section class="card">
+            <section class="card project javascript">
 
                 <h2>未來作品</h2>
 
@@ -115,6 +154,10 @@
     </p>
 
 </footer>
+
+<button id="topBtn">
+↑
+</button>
 
 <script src="js/script.js"></script>
 

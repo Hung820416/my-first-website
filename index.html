@@ -11,11 +11,9 @@
 
     <title>振宏的個人網站</title>
 
-
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="icon" href="images/adobe.jpg">
-
 
 </head>
 
@@ -23,228 +21,321 @@
 <body class="dark">
 
 
+<!-- Loading -->
+
+<div id="loader">
+
+    <h2>
+        振宏的網站載入中...
+    </h2>
+
+</div>
+
+
+
 <div class="page">
 
 
-    <!-- 網站上方區域 -->
 
-    <header>
+<header>
 
 
-        <nav class="navbar">
+<nav class="navbar">
 
 
-            <h2>
-                振宏的網站
-            </h2>
+<h2>
+振宏的網站
+</h2>
 
 
 
-            <ul>
+<button id="menuBtn">
+☰
+</button>
 
-                <li>
-                  <a href="#home">
-                        首頁
-                    </a>
-                </li>
 
 
-                <li>
-                    <a href="about.html">
-                        關於我
-                    </a>
-                </li>
+<ul id="navMenu">
 
 
-                <li>
-                    <a href="projects.html">
-                        作品
-                    </a>
-                </li>
+<li>
+<a href="index.html">
+首頁
+</a>
+</li>
 
 
-                <li>
-                    <a href="contact.html">
-                        聯絡
-                    </a>
-                </li>
+<li>
+<a href="about.html">
+關於我
+</a>
+</li>
 
 
-            </ul>
+<li>
+<a href="projects.html">
+作品
+</a>
+</li>
 
 
-        </nav>
+<li>
+<a href="contact.html">
+聯絡
+</a>
+</li>
 
 
-    </header>
+</ul>
 
 
 
+</nav>
 
-    <!-- 網站主要內容 -->
 
+</header>
 
-    <main>
 
 
-        <h1 id="home">
-            歡迎來到我的網站
-        </h1>
 
 
+<main>
 
-        <p class="intro">
-            我是振宏，這是我的第一個網站！
-        </p>
 
 
+<h1 id="home">
 
+歡迎來到我的網站
 
+</h1>
 
-        <div class="container">
 
 
+<p class="intro">
 
-            <!-- 關於我 -->
+我是振宏，這是我的第一個網站！
 
+</p>
 
-            <section class="card">
 
 
-                <h2>
-                    關於我
-                </h2>
 
 
+<div class="container">
 
-                <img 
-                id="profileImg"
-                src="images/profile.jpg"
-                alt="振宏的照片">
 
 
 
-                <p>
 
-                    我目前正在學習網站開發，
-                    希望未來可以建立自己的作品集網站，
-                    並持續學習 HTML、CSS、JavaScript。
+<section class="card reveal">
 
-                </p>
 
+<h2>
+關於我
+</h2>
 
 
 
-                <button id="contactBtn">
+<img 
+id="profileImg"
+src="images/profile.jpg"
+alt="振宏的照片">
 
-                    聯絡我
 
-                </button>
 
+<p>
 
+我目前正在學習網站開發，
+希望未來可以建立自己的作品集網站，
+並持續學習 HTML、CSS、JavaScript。
 
-                <button id="darkBtn">
+</p>
 
-                    深色模式
 
-                </button>
 
+<button id="contactBtn">
 
+聯絡我
 
-            </section>
+</button>
 
 
 
+<button id="darkBtn">
 
+淺色模式
 
+</button>
 
 
-            <!-- 我的夢想 -->
 
+</section>
 
-            <section class="card">
 
 
-                <h2>
-                    我的夢想
-                </h2>
 
 
 
-                <ul>
 
+<section class="card">
 
-                    <li>1. 環遊世界一圈</li>
 
-                    <li>2. 到南極旅行</li>
+<h2>
+我的夢想
+</h2>
 
-                    <li>3. 上太空</li>
 
-                    <li>4. 潛水看海底世界</li>
 
-                    <li>5. 到北極看極光</li>
+<ul>
 
-                    <li>6. 成為投資家</li>
 
-                    <li>7. 成為創業者</li>
+<li>1. 環遊世界一圈</li>
 
-                    <li>8. 建立一家上市公司</li>
+<li>2. 到南極旅行</li>
 
-                    <li>9. 年收入破千萬</li>
+<li>3. 上太空</li>
 
-                    <li>10. 建立被動收入系統</li>
+<li>4. 潛水看海底世界</li>
 
-                    <li>11. 實現財務自由</li>
+<li>5. 到北極看極光</li>
 
-                    <li>12. 建立自己的品牌</li>
+<li>6. 成為投資家</li>
 
-                    <li>13. 成為某領域專家</li>
+<li>7. 成為創業者</li>
 
-                    <li>14. 創造改變世界的產品</li>
+<li>8. 建立一家上市公司</li>
 
-                    <li>15. 留下影響世界的作品</li>
+<li>9. 年收入破千萬</li>
 
-                    <li>16. 學習更多程式語言</li>
+<li>10. 建立被動收入系統</li>
 
-                    <li>17. 成為優秀工程師</li>
+<li>11. 實現財務自由</li>
 
-                    <li>18. 幫助更多人</li>
+<li>12. 建立自己的品牌</li>
 
-                    <li>19. 成為值得信任的人</li>
+<li>13. 成為某領域專家</li>
 
-                    <li>20. 活成自己理想的樣子</li>
+<li>14. 創造改變世界的產品</li>
 
+<li>15. 留下影響世界的作品</li>
 
-                </ul>
+<li>16. 學習更多程式語言</li>
 
+<li>17. 成為優秀工程師</li>
 
-            </section>
+<li>18. 幫助更多人</li>
 
-            <section class="card">
+<li>19. 成為值得信任的人</li>
 
-             <h2>我的技能</h2>
+<li>20. 活成自己理想的樣子</li>
 
-             <p>HTML</p>
-              <progress value="80" max="100"></progress>
 
-              <p>CSS</p>
-              <progress value="75" max="100"></progress>
+</ul>
 
-              <p>JavaScript</p>
-             <progress value="70" max="100"></progress>
 
-              <p>Git / GitHub</p>
-              <progress value="65" max="100"></progress>
+</section>
 
-            </section>
 
 
 
-        </div>
 
 
-    </main>
 
+<section class="card skills">
+
+
+<h2>
+我的技能
+</h2>
+
+
+
+<p>
+HTML
+</p>
+
+
+<div class="skill-bar">
+
+    <div class="skill html">
+
+        90%
+
+    </div>
+
+</div>
+
+
+
+
+
+<p>
+CSS
+</p>
+
+
+<div class="skill-bar">
+
+    <div class="skill css">
+
+        80%
+
+    </div>
+
+</div>
+
+
+
+
+
+<p>
+JavaScript
+</p>
+
+
+<div class="skill-bar">
+
+    <div class="skill javascript">
+
+        60%
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<p>
+Git / GitHub
+</p>
+
+
+<div class="skill-bar">
+
+    <div class="skill git">
+
+        70%
+
+    </div>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+</div>
+
+
+
+</main>
 
 
 
@@ -254,20 +345,28 @@
 
 
 
-<!-- 網站底部 -->
-
 
 <footer>
 
 
-    <p>
-        © 2026 振宏的個人網站
-    </p>
+<p>
+© 2026 振宏的個人網站
+</p>
 
 
-    <p>
-        學習 HTML | CSS | JavaScript
-    </p>
+<p>
+學習 HTML | CSS | JavaScript
+</p>
+
+<p>
+
+訪客人數：
+
+<span id="visitorCount">
+0
+</span>
+
+</p>
 
 
 </footer>
@@ -276,8 +375,17 @@
 
 
 
-<script src="js/script.js"></script>
+<button id="topBtn">
 
+↑
+
+</button>
+
+
+
+
+
+<script src="js/script.js"></script>
 
 
 </body>
