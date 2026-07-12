@@ -60,7 +60,10 @@
 
 
 
-        <form class="contact-form">
+        <form 
+        class="contact-form"
+        action="https://formsubmit.co/a0982417707"
+        method="POST">
 
 
             <label>
@@ -70,7 +73,10 @@
             <br>
 
 
-            <input type="text" placeholder="請輸入姓名">
+            <input 
+            type="text"
+            name="name"
+            placeholder="請輸入姓名">
 
 
             <br><br>
@@ -87,14 +93,21 @@
             <br>
 
 
-            <input type="email" placeholder="請輸入Email">
+            <input 
+            type="email"
+            name="email"
+            placeholder="請輸入Email">
 
 
             <br><br>
 
             <label for="subject">主旨：</label>
 
-            <input type="text" id="subject" placeholder="內容主旨" name="subject">
+            <input 
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="內容主旨">
 
             <label>
             留言內容：
@@ -104,8 +117,12 @@
             <br>
 
 
-            <textarea 
+            <textarea
+
+            name="message"
+
             placeholder="請輸入留言">
+
             </textarea>
 
 
