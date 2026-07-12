@@ -412,3 +412,8 @@ footer p {
 
 
 }
+
+section,
+h1 {
+    scroll-margin-top: 100px;
+}
