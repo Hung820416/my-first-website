@@ -300,3 +300,22 @@ reveal
 
 
 reveal();
+function openImage(src) {
+
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightboxImg");
+
+    if (!lightbox || !img) return;
+
+    img.src = src;
+    lightbox.style.display = "flex";
+}
+
+function closeImage() {
+
+    const lightbox = document.getElementById("lightbox");
+
+    if (lightbox) {
+        lightbox.style.display = "none";
+    }
+}

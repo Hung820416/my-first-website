@@ -85,9 +85,10 @@
                 <h2>作品 1</h2>
 
                 <img
-                 class="project-image"
-                 src="images/website.png"
-                 alt="我的第一個網站">
+                class="project-image"
+                src="images/website.png"
+                alt="我的第一個網站"
+                onclick="openImage(this.src)">
 
                 <h3>我的第一個個人網站</h3>
 
@@ -168,6 +169,10 @@
 </button>
 
 <script src="js/script.js"></script>
+
+<div id="lightbox" onclick="closeImage()">
+    <img id="lightboxImg">
+</div>
 
 </body>
 
