@@ -29,10 +29,15 @@
 
             <h2>振宏的網站</h2>
 
+            <button id="menuBtn">
+            ☰
+            </button>
+
             <ul>
                 <li><a href="index.html">首頁</a></li>
                 <li><a href="about.html">關於我</a></li>
                 <li><a href="projects.html">作品</a></li>
+                <li><a href="blog.html">部落格</a></li>
                 <li><a href="contact.html">聯絡</a></li>
             </ul>
 
@@ -78,7 +83,7 @@
 
             </div>
 
-        <div class="container">
+        <div class="container" id="projectList">
 
             <section class="card project html css javascript">
 
@@ -89,6 +94,12 @@
                 src="images/website.png"
                 alt="我的第一個網站"
                 onclick="openImage(this.src)">
+
+                <h2>JSON 作品資料</h2>
+
+                <div id="projectList">
+
+                </div>
 
                 <h3>我的第一個個人網站</h3>
 
@@ -169,6 +180,18 @@
 </button>
 
 <script src="js/script.js"></script>
+
+<script src="js/darkMode.js"></script>
+
+<script src="js/menu.js"></script>
+
+<script src="js/visitor.js"></script>
+
+<script src="js/projects.js"></script>
+
+<script src="js/animation.js"></script>
+
+
 
 <div id="lightbox" onclick="closeImage()">
     <img id="lightboxImg">

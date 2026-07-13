@@ -563,30 +563,19 @@ progress {
 
 }
 #menuBtn {
-
     display:none;
-
-    font-size:25px;
-
 }
 
 /* 漢堡選單按鈕 */
-#menuBtn {
+@media(max-width:768px){
 
-    display: none;
+    #menuBtn{
 
-    background: none;
+        display:block;
 
-    border: none;
+    }
 
-    color: white;
-
-    font-size: 30px;
-
-    cursor: pointer;
-
-}
-/* 作品分類 */
+}/* 作品分類 */
 
 
 .filter {

@@ -1,87 +1,93 @@
-const button = document.getElementById("contactBtn");
+// =============================
+// 聯絡按鈕
+// =============================
+
+const contactBtn = document.getElementById("contactBtn");
 
 const title = document.getElementById("title");
 
-const image = document.getElementById("profileImg");
-
-const darkBtn = document.getElementById("darkBtn");
+const profileImg = document.getElementById("profileImg");
 
 
-button.addEventListener("click", function() {
+if(contactBtn){
 
-    title.textContent = "歡迎來到振宏的程式世界！";
+    contactBtn.addEventListener("click", function(){
 
-    document.body.style.backgroundColor = "#28ee01";
+        if(title){
 
-    image.src = "images/new.jpg";
+            title.textContent = "歡迎來到振宏的程式世界！";
 
-});
-
-
-darkBtn.addEventListener("click", function() {
-
-    document.body.classList.toggle("dark");
-
-});
-const topBtn = document.getElementById("topBtn");
+        }
 
 
-window.addEventListener("scroll", function(){
-
-    if(window.scrollY > 300){
-
-        topBtn.style.display = "block";
-
-    }else{
-
-        topBtn.style.display = "none";
-
-    }
-
-});
+        document.body.style.backgroundColor = "#28ee01";
 
 
+        if(profileImg){
 
-topBtn.addEventListener("click", function(){
+            profileImg.src = "images/new.jpg";
 
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
+        }
 
     });
 
-});
-window.addEventListener("load",function(){
-
-    const loader = document.getElementById("loader");
+}
 
 
-    setTimeout(function(){
+// =============================
+// 回到頂端
+// =============================
 
-        loader.style.display="none";
-
-    },1000);
-
-
-});
-const menuBtn =
-document.getElementById("menuBtn");
+const topBtn = document.getElementById("topBtn");
 
 
-const navMenu =
-document.getElementById("navMenu");
+if(topBtn){
+
+
+    window.addEventListener("scroll", function(){
+
+
+        if(window.scrollY > 300){
+
+            topBtn.style.display = "block";
+
+        }
+
+        else{
+
+            topBtn.style.display = "none";
+
+        }
+
+
+    });
 
 
 
-menuBtn.addEventListener("click",function(){
+    topBtn.addEventListener("click", function(){
 
-    navMenu.classList.toggle("active");
 
-});
+        window.scrollTo({
 
-//作品分類
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+
+    });
+
+
+}
+
+
+
+
+
+// =============================
+// 作品分類
+// =============================
 
 
 const filterBtns =
@@ -92,121 +98,109 @@ const projects =
 document.querySelectorAll(".project");
 
 
+if(filterBtns.length > 0){
+
 
 filterBtns.forEach(function(btn){
 
 
-btn.addEventListener("click",function(){
+    btn.addEventListener("click",function(){
+
+
+        let category =
+        this.textContent;
 
 
 
-let category=this.textContent;
+        projects.forEach(function(project){
 
 
-
-projects.forEach(function(project){
-
-
-if(category=="全部"){
-
-project.style.display="block";
-
-}
+            if(category=="全部"){
 
 
-else if(project.classList.contains(category.toLowerCase())){
-
-project.style.display="block";
-
-}
+                project.style.display="block";
 
 
-else{
+            }
 
-project.style.display="none";
 
-}
+            else if(project.classList.contains(category.toLowerCase())){
+
+
+                project.style.display="block";
+
+
+            }
+
+
+            else{
+
+
+                project.style.display="none";
+
+
+            }
+
+
+        });
+
+
+    });
 
 
 });
 
 
-
-});
-
-
-
-});
-// 訪客計數器
-
-
-let count = localStorage.getItem("visitors");
-
-
-
-if(count == null){
-
-    count = 1;
-
-}
-
-else{
-
-    count++;
-
 }
 
 
 
-localStorage.setItem("visitors", count);
+
+// =============================
+// 作品搜尋
+// =============================
 
 
+const searchInput =
+document.getElementById("searchInput");
 
-const visitor =
-document.getElementById("visitorCount");
-
-
-
-if(visitor){
-
-    visitor.textContent = count;
-
-}
-//作品搜尋功能
-
-const searchInput = document.getElementById("searchInput");
 
 
 if(searchInput){
 
 
-    const projectCards = document.querySelectorAll(".project");
+    const projectCards =
+    document.querySelectorAll(".project");
 
 
-    searchInput.addEventListener("input", function(){
+    searchInput.addEventListener("input",function(){
 
 
-        let keyword = this.value.toLowerCase();
+        let keyword =
+        this.value.toLowerCase();
 
 
 
         projectCards.forEach(function(card){
 
 
-            let text = card.innerText.toLowerCase();
+            let text =
+            card.innerText.toLowerCase();
 
 
 
             if(text.includes(keyword)){
 
 
-                card.style.display = "block";
+                card.style.display="block";
 
 
-            }else{
+            }
+
+            else{
 
 
-                card.style.display = "none";
+                card.style.display="none";
 
 
             }
@@ -219,31 +213,36 @@ if(searchInput){
 
 
 }
-// 打字效果
-
-
-const typingText = "歡迎來到我的網站";
-
-
-const typingElement = document.getElementById("typing");
-
-
-let typingIndex = 0;
 
 
 
-function typing(){
-
-    if(typingElement && typingIndex < typingText.length){
 
 
-        typingElement.innerHTML += typingText[typingIndex];
 
 
-        typingIndex++;
+// =============================
+// Lightbox 圖片放大
+// =============================
 
 
-        setTimeout(typing,150);
+function openImage(src){
+
+
+    const lightbox =
+    document.getElementById("lightbox");
+
+
+    const img =
+    document.getElementById("lightboxImg");
+
+
+    if(lightbox && img){
+
+
+        img.src = src;
+
+
+        lightbox.style.display="flex";
 
 
     }
@@ -253,69 +252,23 @@ function typing(){
 
 
 
-typing();
-// Scroll Reveal
+function closeImage(){
 
 
-const reveals =
-document.querySelectorAll(".reveal");
+    const lightbox =
+    document.getElementById("lightbox");
 
 
-
-function reveal(){
-
-    reveals.forEach(function(item){
+    if(lightbox){
 
 
-        let windowHeight =
-        window.innerHeight;
+        lightbox.style.display="none";
 
 
-        let elementTop =
-        item.getBoundingClientRect().top;
-
-
-
-        if(elementTop < windowHeight - 100){
-
-
-            item.classList.add("active");
-
-
-        }
-
-
-    });
-
-
-}
-
-
-
-window.addEventListener(
-"scroll",
-reveal
-);
-
-
-
-reveal();
-function openImage(src) {
-
-    const lightbox = document.getElementById("lightbox");
-    const img = document.getElementById("lightboxImg");
-
-    if (!lightbox || !img) return;
-
-    img.src = src;
-    lightbox.style.display = "flex";
-}
-
-function closeImage() {
-
-    const lightbox = document.getElementById("lightbox");
-
-    if (lightbox) {
-        lightbox.style.display = "none";
     }
+
+
 }
+
+
+
